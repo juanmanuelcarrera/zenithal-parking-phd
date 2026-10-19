@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package parking;
+
+message ParkingEvent {
+  string node_id = 1;
+  int32 spot_id = 2;
+  int64 timestamp = 3;
+
+  enum Status {
+    FREE = 0;
+    OCCUPIED = 1;
+    PARTIAL = 2;
+  }
+  Status status = 4;
+  float occupied_area = 5;
+
+  enum VehicleType {
+    CAR = 0;
+    MOTORCYCLE = 1;
+  }
+  VehicleType vehicle_type = 6;
+}

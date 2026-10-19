@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# rust
+core-rs/target/
+*.so
+
+# generated
+messaging/parking_event_pb2.py
+runs/
+outputs/
+data/ZenithalParking/
+
+# weights
+*.pt
+*.pth
+*.h5
+*.onnx
+
+.DS_Store
+.vscode/
+.idea/
+.env

@@ -1,0 +1,13 @@
+[package]
+name = "rust_parking_core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[lib]
+name = "parking_logic"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = "0.21"
+geo = "0.28"

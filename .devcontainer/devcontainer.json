@@ -1,0 +1,13 @@
+{
+  "name": "Zenithal Parking",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/zenithal-parking",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter", "rust-lang.rust-analyzer"]
+    }
+  },
+  "postCreateCommand": "make setup && make proto"
+}

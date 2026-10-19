@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspaces/zenithal-parking:cached
+    command: sleep infinity
+    # resource profile of an embedded node (Raspberry Pi class)
+    cpus: 4
+    mem_limit: 1g
+
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
